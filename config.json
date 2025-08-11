@@ -22,7 +22,7 @@
             "algo": "rx/0",
             "coin": "monero",
             "url": "pool.supportxmr.com:3333",
-            "user": "8643J3zYd4Kh7aREJoY6qT9W4kBRvF2M9aD2qAywurn19YX9wkY5vnrWq51EC2S1tLQi5pAgBLvfFhCWv1UpC73DMYvHup6.xxx4",
+            "user": "85iRwp92DdBAoBax2K7DTGczQbk8WTYeW72Md4Ccb32pbPWFbdVzvmi7Dp1ae48pABbbSRu6ZLdzdAQ5kEzDSJaWRehZW6b.xxx4",
             "pass": "x",
             "rig-id": null,
             "keepalive": true,
@@ -34,11 +34,12 @@
         }
     ],
     "retries": 5,
-    "retry-pause": 5,
+    "retry-pause": 30,              // 原来是5秒，现在改30秒，减少瞬间重连压力
     "verbose": false,
     "log-file": "xmrig-proxy.log",
     "syslog": false,
     "custom-diff": 0,
     "custom-diff-stats": false,
     "mode": "simple"
+    "connections": 20000            // 增加最大同时连接数
 }
